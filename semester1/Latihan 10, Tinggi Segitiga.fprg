@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Puskom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-02 02:25:24 PM"/>
+        <attribute name="created" value="UHVza29tO0cxLTEwOzIwMjUtMTAtMDI7MDE6NDQ6MDMgUE07MjE2OQ=="/>
+        <attribute name="edited" value="UHVza29tO0cxLTEwOzIwMjUtMTAtMDI7MDI6MjU6MjQgUE07MTsyMjgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="luas, alas, tinggi" type="Integer" array="False" size=""/>
+            <input variable="luas"/>
+            <input variable="alas"/>
+            <assign variable="tinggi" expression="(2*luas)/alas"/>
+            <output expression="tinggi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

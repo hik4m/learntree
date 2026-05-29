@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Puskom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-18 08:56:51 AM"/>
+        <attribute name="created" value="UHVza29tO0cxLTEwOzIwMjUtMDktMTg7MDg6NDg6NTIgQU07MjE4NA=="/>
+        <attribute name="edited" value="UHVza29tO0cxLTEwOzIwMjUtMDktMTg7MDg6NTY6NTEgQU07MTsyMjkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hasil, alas, tinggi" type="Real" array="False" size=""/>
+            <output expression="&quot;masukkan nilai alas&quot;" newline="True"/>
+            <input variable="alas"/>
+            <output expression="&quot;masukkan nilai tinggi&quot;" newline="True"/>
+            <input variable="tinggi"/>
+            <assign variable="hasil" expression="0.5*alas*tinggi"/>
+            <output expression="hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

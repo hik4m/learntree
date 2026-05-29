@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 13, Agen Mie"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-18 09.02.51 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMTAtMTY7MTAuMTIuMzMgUE07MjQzNQ=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMTAtMTg7MDkuMDIuNTEgUE07NTsyNTU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, bonus, ulangi" type="String" array="False" size=""/>
+            <declare name="jumlahBeli, jenis, jenisGorku" type="Integer" array="False" size=""/>
+            <declare name="total, potongan, total2" type="Real" array="False" size=""/>
+            <declare name="produk" type="String" array="True" size="3"/>
+            <declare name="Gorku" type="String" array="True" size="2"/>
+            <declare name="hargaMie" type="Real" array="True" size="5"/>
+            <assign variable="produk[0]" expression="&quot;Indomie&quot;"/>
+            <assign variable="produk[1]" expression="&quot;Mie Sedaap&quot;"/>
+            <assign variable="produk[2]" expression="&quot;Sarimi&quot;"/>
+            <assign variable="Gorku[0]" expression="&quot;Mie Goreng&quot;"/>
+            <assign variable="Gorku[1]" expression="&quot;Mie Kuah&quot;"/>
+            <assign variable="hargaMie[0]" expression="55000"/>
+            <assign variable="hargaMie[1]" expression="65000"/>
+            <assign variable="hargaMie[2]" expression="53000"/>
+            <assign variable="hargaMie[3]" expression="62500"/>
+            <assign variable="hargaMie[4]" expression="60000"/>
+            <assign variable="ulangi" expression="&quot;y&quot;"/>
+            <while expression="ulangi != &quot;n&quot; &amp;&amp; ulangi != &quot;N&quot;">
+                <output expression="&quot;Input Nama&quot;" newline="True"/>
+                <input variable="nama"/>
+                <output expression="&quot;Pilih Jenis Mie yang mau anda beli:&quot; &amp;ToChar(13)&amp; &quot;1. &quot; &amp;produk[0]&amp;ToChar(13)&amp;&quot;2. &quot;&amp;produk[1] &amp;ToChar(13)&amp; &quot;3. &quot; &amp;produk[2]&amp;ToChar(13)&amp; &quot;Input angka (1-3)&quot;" newline="True"/>
+                <input variable="jenis"/>
+                <while expression="jenis&gt;3">
+                    <output expression="&quot;Pilih Jenis Mie yang mau anda beli:&quot; &amp;ToChar(13)&amp; &quot;1. &quot; &amp;produk[0]&amp;ToChar(13)&amp;&quot;2. &quot;&amp;produk[1] &amp;ToChar(13)&amp; &quot;3. &quot; &amp;produk[2]&amp;ToChar(13)&amp; &quot;Input angka (1-3)&quot;" newline="True"/>
+                    <input variable="jenis"/>
+                </while>
+                <if expression="jenis==1">
+                    <then>
+                        <output expression="&quot;Harga Mie per karton&quot; &amp;ToChar(13)&amp; &quot;1. &quot;&amp;Gorku[0] &amp;&quot; - &quot;&amp; hargaMie[0] &amp;ToChar(13)&amp; &quot;2. &quot;&amp;Gorku[1] &amp; &quot; - &quot; &amp; hargaMie[1] &amp;ToChar(13)&amp; &quot;Input Angka (1-2)&quot;" newline="True"/>
+                        <input variable="jenisGorku"/>
+                        <while expression="jenisGorku&gt;2">
+                            <output expression="&quot;Harga Mie per karton&quot; &amp;ToChar(13)&amp; &quot;1. &quot;&amp;Gorku[0] &amp;&quot; - &quot;&amp; hargaMie[0] &amp;ToChar(13)&amp; &quot;2. &quot;&amp;Gorku[1] &amp; &quot; - &quot; &amp; hargaMie[1] &amp;ToChar(13)&amp; &quot;Input Angka (1-2)&quot;" newline="True"/>
+                            <input variable="jenisGorku"/>
+                        </while>
+                        <output expression="&quot;Mau Beli Berapa Karton?&quot;" newline="True"/>
+                        <input variable="jumlahBeli"/>
+                        <if expression="jenisGorku==1">
+                            <then>
+                                <assign variable="total" expression="hargaMie[0] * jumlahBeli"/>
+                            </then>
+                            <else>
+                                <assign variable="total" expression="hargaMie[1] * jumlahBeli"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="jenis==2">
+                            <then>
+                                <output expression="&quot;Harga Mie per karton&quot; &amp;ToChar(13)&amp; &quot;1. &quot;&amp;Gorku[0] &amp;&quot; - &quot;&amp; hargaMie[2] &amp;ToChar(13)&amp; &quot;2. &quot;&amp;Gorku[1] &amp; &quot; - &quot; &amp; hargaMie[3] &amp;ToChar(13)&amp; &quot;Input Angka (1-2)&quot;" newline="True"/>
+                                <input variable="jenisGorku"/>
+                                <while expression="jenisGorku&gt;2">
+                                    <output expression="&quot;Harga Mie per karton&quot; &amp;ToChar(13)&amp; &quot;1. &quot;&amp;Gorku[0] &amp;&quot; - &quot;&amp; hargaMie[0] &amp;ToChar(13)&amp; &quot;2. &quot;&amp;Gorku[1] &amp; &quot; - &quot; &amp; hargaMie[1] &amp;ToChar(13)&amp; &quot;Input Angka (1-2)&quot;" newline="True"/>
+                                    <input variable="jenisGorku"/>
+                                </while>
+                                <output expression="&quot;Mau Beli Berapa Karton?&quot;" newline="True"/>
+                                <input variable="jumlahBeli"/>
+                                <if expression="jenisGorku==1">
+                                    <then>
+                                        <assign variable="total" expression="hargaMie[2] * jumlahBeli"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="total" expression="hargaMie[3] * jumlahBeli"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;Harga Mie per karton&quot; &amp;ToChar(13)&amp; &quot;1. &quot;&amp;Gorku[0] &amp;&quot; - &quot;&amp; hargaMie[3] &amp;ToChar(13)&amp; &quot;2. &quot;&amp;Gorku[1] &amp; &quot; - &quot; &amp; hargaMie[4] &amp;ToChar(13)&amp; &quot;Input Angka (1-2)&quot;" newline="True"/>
+                                <input variable="jenisGorku"/>
+                                <while expression="jenisGorku&gt;2">
+                                    <output expression="&quot;Harga Mie per karton&quot; &amp;ToChar(13)&amp; &quot;1. &quot;&amp;Gorku[0] &amp;&quot; - &quot;&amp; hargaMie[0] &amp;ToChar(13)&amp; &quot;2. &quot;&amp;Gorku[1] &amp; &quot; - &quot; &amp; hargaMie[1] &amp;ToChar(13)&amp; &quot;Input Angka (1-2)&quot;" newline="True"/>
+                                    <input variable="jenisGorku"/>
+                                </while>
+                                <output expression="&quot;Mau Beli Berapa Karton?&quot;" newline="True"/>
+                                <input variable="jumlahBeli"/>
+                                <if expression="jenisGorku==1">
+                                    <then>
+                                        <assign variable="total" expression="hargaMie[3] * jumlahBeli"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="total" expression="hargaMie[4] * jumlahBeli"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="jumlahBeli &gt;= 20">
+                    <then>
+                        <assign variable="potongan" expression="total * 0.1"/>
+                        <assign variable="total2" expression="total - potongan"/>
+                        <output expression="&quot;=========Nota=========&quot; &amp;ToChar(13)&amp; &quot;Nama Anda: &quot; &amp;nama &amp;ToChar(13)&amp; &quot;Produk/Satuan : &quot; &amp;produk[jenis-1] &amp;&quot; - &quot; &amp;Gorku[jenisGorku-1] &amp;&quot; / &quot; &amp;jumlahBeli &amp;&quot; karton&quot; &amp;ToChar(13)&amp; &quot;Harga Total Semula: Rp.&quot; &amp;total&amp; ToChar(13)" newline="True"/>
+                        <output expression="&quot;=======[REWARD]=======&quot;" newline="True"/>
+                        <output expression="&quot;Harga Setelah Diskon: &quot;&amp;total2 &amp;ToChar(13)&amp;&quot;Kamu Mendapatkan Diskon 10% Karena membeli lebih dari 20 karton&quot;" newline="True"/>
+                        <if expression="total&gt;=1000000 || total&lt;=2000000">
+                            <then>
+                                <output expression="&quot;Kamu Mendapatkan Tas Cantik Karena Pembayaran lebih dari 1 juta&quot;" newline="True"/>
+                                <if expression="total&gt;=2000000">
+                                    <then>
+                                        <output expression="&quot;dan Kamu Mendapatkan Jas Hujan Karena Pembayaran lebih dari 2 juta&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;=========Nota=========&quot; &amp;ToChar(13)&amp; &quot;Nama Anda: &quot; &amp;nama &amp;ToChar(13)&amp; &quot;Produk/Satuan : &quot; &amp;produk[jenis-1] &amp;&quot; - &quot; &amp;Gorku[jenisGorku-1] &amp;&quot; / &quot; &amp;jumlahBeli &amp;&quot; karton&quot; &amp;ToChar(13)&amp; &quot;Harga Total: Rp.&quot; &amp;total" newline="True"/>
+                        <if expression="total&gt;=1000000 &amp;&amp; total&lt;=2000000">
+                            <then>
+                                <output expression="&quot;=======[REWARD]=======&quot;&amp;ToChar(13)&amp; &quot;Kamu Mendapatkan Tas Cantik Karena Pembayaran lebih dari 1 juta&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Mau Ulangi Program (y/n)&quot;" newline="True"/>
+                <input variable="ulangi"/>
+            </while>
+            <output expression="&quot;Terima Kasih Sudah Berbelanja!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TUGAS 2, Menghitung Bangun Datar"/>
+        <attribute name="authors" value="gakyy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-28 08.50.24 PM"/>
+        <attribute name="created" value="Z2FreXk7QU5HR0FDVVk7MjAyNS0wOS0yNTswMzo1ODo1MiBQTTsyNDMy"/>
+        <attribute name="edited" value="Z2FreXk7QU5HR0FDVVk7MjAyNS0wOS0yNTswNDoxOTo1MyBQTTsxOzI1Mzk="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMDktMjg7MDguNTAuMjQgUE07ODsyNTcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Pilihan, hasilL, hasilK, s1, s2, a, t, d1, d2, sisi, b, c, d" type="Integer" array="False" size=""/>
+            <declare name="Pilihan3, identifikasi" type="String" array="False" size=""/>
+            <output expression="&quot;Mau Menghitung Apa?&quot; &amp;ToChar(13)&amp; &quot;1. Jajar Genjang&quot; &amp;ToChar(13)&amp; &quot;2. Belah Ketupat&quot; &amp;ToChar(13)&amp; &quot;3. Trapesium&quot; &amp;ToChar(13)&amp; &quot;4. Layang-layang&quot;" newline="True"/>
+            <input variable="Pilihan"/>
+            <if expression="Pilihan=1">
+                <then>
+                    <assign variable="Pilihan3" expression="&quot;Jajar Genjang&quot;"/>
+                    <output expression="&quot;Input Alas(cm)&quot;" newline="True"/>
+                    <input variable="a"/>
+                    <output expression="&quot;Input Tinggi(cm)&quot;" newline="True"/>
+                    <input variable="t"/>
+                    <output expression="&quot;Input Sisi Pertama(cm)&quot;" newline="True"/>
+                    <input variable="s1"/>
+                    <output expression="&quot;Input Sisi Kedua(cm)&quot;" newline="True"/>
+                    <input variable="s2"/>
+                    <assign variable="hasilL" expression="a*t"/>
+                    <assign variable="hasilK" expression="2*(s1+s2)"/>
+                    <assign variable="identifikasi" expression="&quot;======= Rumus =======&quot; &amp;ToChar(13)&amp; &quot;Luas = &quot; &amp;a&amp; &quot;&#215;&quot; &amp;t&amp; ToChar(13)&amp; &quot;Keliling = 2 &#215; (&quot; &amp;s1&amp;&quot;+&quot;&amp;s2&amp;&quot;)&quot;&amp;ToChar(13)&amp;&quot;======== Hasil ========&quot;"/>
+                </then>
+                <else>
+                    <if expression="Pilihan=2">
+                        <then>
+                            <assign variable="Pilihan3" expression="&quot;Belah Ketupat&quot;"/>
+                            <output expression="&quot;Input Diagonal 1(cm)&quot;" newline="True"/>
+                            <input variable="d1"/>
+                            <output expression="&quot;Input Tinggi(cm)&quot;" newline="True"/>
+                            <input variable="d2"/>
+                            <output expression="&quot;Input Sisi(cm)&quot;" newline="True"/>
+                            <input variable="sisi"/>
+                            <assign variable="hasilL" expression="(d1*d2)/2"/>
+                            <assign variable="hasilK" expression="4*sisi"/>
+                            <assign variable="identifikasi" expression="&quot;======= Rumus =======&quot; &amp;ToChar(13)&amp; &quot;Luas = (&quot; &amp;d1&amp;&quot;&#215;&quot;&amp;d2&amp;&quot;)&quot; &amp;&quot;/2&quot;&amp;ToChar(13)&amp; &quot;Keliling = 4&#215;&quot; &amp;sisi&amp; ToChar(13)&amp;&quot;======= Hasil =======&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="Pilihan=3">
+                                <then>
+                                    <assign variable="Pilihan3" expression="&quot;Trapesium&quot;"/>
+                                    <output expression="&quot;Input Sisi Atas(cm)&quot;" newline="True"/>
+                                    <input variable="a"/>
+                                    <output expression="&quot;Input Sisi Bawah(cm)&quot;" newline="True"/>
+                                    <input variable="b"/>
+                                    <output expression="&quot;Input Tinggi(cm)&quot;" newline="True"/>
+                                    <input variable="t"/>
+                                    <output expression="&quot;Input Sisi Kanan(cm)&quot;" newline="True"/>
+                                    <input variable="c"/>
+                                    <output expression="&quot;Input Sisi Kiri(cm)&quot;" newline="True"/>
+                                    <input variable="d"/>
+                                    <assign variable="hasilL" expression="0.5 * (a+b) *t"/>
+                                    <assign variable="hasilK" expression="a+b+c+d"/>
+                                    <assign variable="identifikasi" expression="&quot;======= Rumus =======&quot; &amp;ToChar(13)&amp; &quot;Luas = 1/2 &#215; (&quot; &amp;a&amp;&quot;+&quot;&amp;b&amp;&quot;) &#215;&quot; &amp;t&amp; Tochar(13)&amp; &quot;Keliling = &quot; &amp;a&amp; &quot;+&quot; &amp;b&amp; &quot;+&quot; &amp;c&amp; &quot;+&quot;&amp;d&amp; ToChar(13)&amp; &quot;======= Hasil =======&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="Pilihan=4">
+                                        <then>
+                                            <assign variable="Pilihan3" expression="&quot;Layang-layang&quot;"/>
+                                            <output expression="&quot;Input Diagonal 1(cm)&quot;" newline="True"/>
+                                            <input variable="d1"/>
+                                            <output expression="&quot;Input Diagonal 2(cm)&quot;" newline="True"/>
+                                            <input variable="d2"/>
+                                            <output expression="&quot;Input Sisi Pertama(cm)&quot;" newline="True"/>
+                                            <input variable="a"/>
+                                            <output expression="&quot;Input Sisi Kedua(cm)&quot;" newline="True"/>
+                                            <input variable="b"/>
+                                            <assign variable="hasilL" expression="0.5*d1*d2"/>
+                                            <assign variable="hasilK" expression="2*(a+b)"/>
+                                            <assign variable="identifikasi" expression="&quot;======= Rumus =======&quot; &amp;ToChar(13)&amp; &quot;Luas = 1/2 &#215; &quot; &amp;d1&amp;&quot;&#215;&quot;&amp;d2&amp; Tochar(13)&amp; &quot;Keliling = 2&#215;(&quot; &amp;a&amp; &quot;+&quot; &amp;b&amp; &quot;)&quot;&amp; ToChar(13)&amp; &quot;======= Hasil =======&quot;"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Nguawur nek nginput&quot;" newline="True"/>
+                                            <assign variable="identifikasi" expression="&quot;Amal dan Ibadah&quot;"/>
+                                            <assign variable="Pilihan3" expression="&quot;Diri sendiri&quot;"/>
+                                            <assign variable="hasilL" expression="0"/>
+                                            <assign variable="hasilK" expression="0"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Program menghitung Luas dan Keliling &quot;&amp;Pilihan3 &amp;ToChar(13) &amp;identifikasi &amp;ToChar(13)&amp;&quot;Luasnya: &quot; &amp;hasilL&amp;&quot;cm&quot; &amp;ToChar(13)&amp; &quot;Kelilingnya : &quot; &amp;hasilK&amp; &quot;cm&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

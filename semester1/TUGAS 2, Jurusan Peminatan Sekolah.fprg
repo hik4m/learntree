@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TUGAS 2, Jurusan Peminatan Sekolah"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-18 09.19.47 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMTAtMTg7MDUuMzAuMDMgUE07MjQzOA=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMTAtMTg7MDkuMTkuNDcgUE07MjsyNTY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="minat, nama, ulg, hasil" type="String" array="False" size=""/>
+            <declare name="mtk, bio, fis, kim, geo, eko, sos, bin, bing, bjaw" type="Integer" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <assign variable="ulg" expression="&quot;y&quot;"/>
+            <while expression="ulg != &quot;n&quot; &amp;&amp; ulg != &quot;N&quot;">
+                <output expression="&quot;PROGRAM PENJURUSAN SEKOLAH&quot;" newline="True"/>
+                <output expression="&quot;Input Nama&quot;" newline="True"/>
+                <input variable="nama"/>
+                <output expression="&quot;Input Minat (IPA/IPS/BAHASA)&quot;" newline="True"/>
+                <input variable="minat"/>
+                <while expression="minat != &quot;IPA&quot; &amp;&amp; minat != &quot;IPS&quot; &amp;&amp; minat != &quot;BAHASA&quot; &amp;&amp; minat != &quot;ipa&quot; &amp;&amp; minat != &quot;ips&quot; &amp;&amp; minat != &quot;bahasa&quot; &amp;&amp; minat != &quot;bhs&quot;">
+                    <output expression="&quot;Input Minat (IPA/IPS/BAHASA)&quot;" newline="True"/>
+                    <input variable="minat"/>
+                </while>
+                <output expression="&quot;input Nilai Matematika&quot;" newline="True"/>
+                <input variable="mtk"/>
+                <output expression="&quot;input Nilai Kimia&quot;" newline="True"/>
+                <input variable="kim"/>
+                <output expression="&quot;input Nilai Biologi&quot;" newline="True"/>
+                <input variable="bio"/>
+                <output expression="&quot;input Nilai Fisika&quot;" newline="True"/>
+                <input variable="fis"/>
+                <output expression="&quot;input Nilai Geografi&quot;" newline="True"/>
+                <input variable="geo"/>
+                <output expression="&quot;input Nilai Sosiologi&quot;" newline="True"/>
+                <input variable="sos"/>
+                <output expression="&quot;input Nilai Ekonomi&quot;" newline="True"/>
+                <input variable="eko"/>
+                <output expression="&quot;input Nilai Bahasa Indonesia&quot;" newline="True"/>
+                <input variable="bin"/>
+                <output expression="&quot;input Nilai Bahasa Inggris&quot;" newline="True"/>
+                <input variable="bing"/>
+                <output expression="&quot;input Nilai Bahasa Jawa&quot;" newline="True"/>
+                <input variable="bjaw"/>
+                <assign variable="avg" expression="(mtk + bio + fis + kim + geo + eko + sos+ bin + bing + bjaw) / 10"/>
+                <if expression="mtk&gt;=80 &amp;&amp; fis&gt;=78 &amp;&amp; bio&gt;=78 &amp;&amp; kim&gt;=78">
+                    <then>
+                        <if expression="minat==&quot;IPA&quot; || minat==&quot;ipa&quot;">
+                            <then>
+                                <assign variable="hasil" expression="&quot;Lulus di jurusan IPA&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="hasil" expression="&quot;Disarankan ke jurusan IPA&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="mtk&gt;=80 &amp;&amp; geo&gt;=78 &amp;&amp; eko&gt;=80 &amp;&amp; sos&gt;=78">
+                            <then>
+                                <if expression="minat==&quot;IPS&quot; || minat==&quot;ips&quot;">
+                                    <then>
+                                        <assign variable="hasil" expression="&quot;Lulus di jurusan IPS&quot;"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="hasil" expression="&quot;Disarankan ke jurusan IPS&quot;"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="mtk&gt;=75 &amp;&amp; bin&gt;=80 &amp;&amp; bing&gt;=78 &amp;&amp; bjaw&gt;=75">
+                                    <then>
+                                        <if expression="minat==&quot;BAHASA&quot; || minat==&quot;bahasa&quot; || minat==&quot;bhs&quot;">
+                                            <then>
+                                                <assign variable="hasil" expression="&quot;Lulus di jurusan BAHASA&quot;"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="hasil" expression="&quot;Disarankan ke jurusan BAHASA&quot;"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <assign variable="hasil" expression="&quot;Disarankan Pindah Sekolah&quot;"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;HASIL KEPUTUSAN PENJURUSAN&quot; &amp;ToChar(13)&amp; &quot;Nama : &quot; &amp;nama &amp;ToChar(13)&amp; &quot;Rata-rata Nilai : &quot; &amp;avg&amp;ToChar(13)&amp; &quot;Minat Jurusan : &quot; &amp;minat &amp;ToChar(13)&amp; &quot;Penjurusan : &quot; &amp;hasil" newline="True"/>
+                <output expression="&quot;Ingin Ulangi Program? (y/n)&quot;" newline="True"/>
+                <input variable="ulg"/>
+            </while>
+            <output expression="&quot;Program Selesai, Terima Kasih&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

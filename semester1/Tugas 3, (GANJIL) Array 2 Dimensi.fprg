@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tugas 3, (GANJIL) Array 2 Dimensi"/>
+        <attribute name="authors" value="Hikam"/>
+        <attribute name="about" value="Buat Tugasssss"/>
+        <attribute name="saved" value="2025-11-21 01.33.22 PM"/>
+        <attribute name="created" value="SFA7SElLQU07MjAyNS0xMS0yMTsxMS40Ny4wMSBBTTsxNzQ3"/>
+        <attribute name="edited" value="SFA7SElLQU07MjAyNS0xMS0yMTswMS4zMy4yMiBQTTsxOzE4Njc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="True" size="9"/>
+            <declare name="B, Hasl" type="Integer" array="True" size="12"/>
+            <declare name="i, j, k" type="Integer" array="False" size=""/>
+            <declare name="oprA, oprB, oprC" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <for variable="j" start="0" end="2" direction="inc" step="1">
+                    <output expression="&quot;Input A[&quot;&amp;i+1&amp;&quot;, &quot; &amp;j+1&amp;&quot;]&quot;" newline="True"/>
+                    <input variable="A[i*3+j]"/>
+                </for>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <for variable="j" start="0" end="3" direction="inc" step="1">
+                    <output expression="&quot;Input B[&quot;&amp;i+1&amp;&quot;, &quot;&amp; j+1&amp;&quot;]&quot;" newline="True"/>
+                    <input variable="B[i*4+j]"/>
+                </for>
+            </for>
+            <for variable="i" start="0" end="11" direction="inc" step="1">
+                <assign variable="Hasl[i]" expression="0"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <for variable="j" start="0" end="3" direction="inc" step="1">
+                    <for variable="k" start="0" end="2" direction="inc" step="1">
+                        <assign variable="oprA" expression="i*3+k"/>
+                        <assign variable="oprB" expression="k*4+j"/>
+                        <assign variable="oprC" expression="i*4+j"/>
+                        <assign variable="Hasl[oprC]" expression="Hasl[oprC] + A[oprA] * B[oprB]"/>
+                    </for>
+                </for>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <for variable="j" start="0" end="3" direction="inc" step="1">
+                    <assign variable="oprC" expression="i*4+j"/>
+                    <output expression="&quot;Hasil[&quot;&amp;i+1&amp;&quot;, &quot;&amp; j+1&amp;&quot;]= &quot;&amp; Hasl[oprC]" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

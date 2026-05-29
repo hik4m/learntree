@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan Soal UTS"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-10 09.58.52 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMTEtMTA7MDkuMTIuMDggUE07MjQ0MA=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMTEtMTA7MDkuNTguNTIgUE07MjsyNTU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, q, x, a" type="Integer" array="False" size=""/>
+            <input variable="q"/>
+            <assign variable="n" expression="2"/>
+            <assign variable="x" expression="1"/>
+            <assign variable="a" expression="0"/>
+            <while expression="q&gt;=n">
+                <output expression="n" newline="True"/>
+                <assign variable="a" expression="a+1"/>
+                <assign variable="x" expression="x+2"/>
+                <assign variable="n" expression="n+x"/>
+            </while>
+            <output expression="&quot;Jumlah data nya: &quot; &amp;a" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

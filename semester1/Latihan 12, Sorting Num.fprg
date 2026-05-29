@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PUSKOM"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-16 02:10:02 PM"/>
+        <attribute name="created" value="UFVTS09NO0cxLTE3OzIwMjUtMTAtMTY7MDE6MjU6MDUgUE07MjAyMg=="/>
+        <attribute name="edited" value="UFVTS09NO0cxLTE3OzIwMjUtMTAtMTY7MDI6MTA6MDIgUE07MTsyMTIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a&gt;b">
+                <then>
+                    <if expression="a&gt;c &amp;&amp; b&gt;c">
+                        <then>
+                            <output expression="&quot; Nilai Terbesarnya adalah A: &quot; &amp;a &amp;ToChar(13)&amp; &quot;Urutan Terbesar - Terkecil : &quot; &amp;a&amp; &quot;  &quot; &amp;b &amp;&quot;  &quot; &amp;c" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Nilai Terbesar adalah A: &quot; &amp;a &amp;ToChar(13)&amp; &quot;Urutan Terbesar - Terkecil : &quot; &amp;a&amp; &quot;  &quot; &amp;c &amp;&quot;  &quot; &amp;b" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="b&gt;c">
+                        <then>
+                            <output expression="&quot; Nilai Terbesarnya adalah B: &quot; &amp;b &amp;ToChar(13)&amp; &quot;Urutan Terbesar - Terkecil : &quot; &amp;b&amp; &quot;  &quot; &amp;c &amp;&quot;  &quot; &amp;a" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; Nilai Terbesarnya adalah C: &quot; &amp;c &amp;ToChar(13)&amp; &quot;Urutan Terbesar - Terkecil : &quot; &amp;c&amp; &quot;  &quot; &amp;b &amp;&quot;  &quot; &amp;a" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

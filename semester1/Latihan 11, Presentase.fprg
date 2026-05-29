@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Puskom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-02 02:36:45 PM"/>
+        <attribute name="created" value="UHVza29tO0cxLTEwOzIwMjUtMTAtMDI7MDI6MjY6MTAgUE07MjE2OA=="/>
+        <attribute name="edited" value="UHVza29tO0cxLTEwOzIwMjUtMTAtMDI7MDI6MzY6NDUgUE07MTsyMjg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pres, mh, jM, jml" type="Integer" array="False" size=""/>
+            <input variable="mh"/>
+            <input variable="jM"/>
+            <assign variable="pres" expression="(mH/jM) *100"/>
+            <output expression="pres &amp;&quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

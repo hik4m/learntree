@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 1, sisa pengeluaran"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-18 09.59.10 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMDktMTg7MDkuMjAuMzUgUE07MjQ1NA=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMDktMTg7MDkuNTkuMTAgUE07MTsyNTY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="UBI, JA, US, DAPUR, SAKU, LISTRIK, TABUNGAN, SISA1, SISA2, SISA3, SISA4" type="Integer" array="False" size=""/>
+            <output expression="&quot;INPUT UANG BELANJANYA : &quot;" newline="True"/>
+            <input variable="UBI"/>
+            <output expression="&quot;BERAPA JUMLAH ANAKNYA?&quot;" newline="True"/>
+            <input variable="JA"/>
+            <assign variable="US" expression="0.3 * UBI"/>
+            <output expression="&quot;UANG SEKOLAH YANG HARUS DIKELUARKAN :Rp. &quot; &amp;US" newline="True"/>
+            <assign variable="SAKU" expression="JA * 200000"/>
+            <output expression="&quot;PENGELUARAN UNTUK UANG SAKU: Rp. &quot; &amp;SAKU" newline="True"/>
+            <assign variable="SISA1" expression="UBI-US-SAKU"/>
+            <output expression="&quot;SISA UANG ANDA :Rp. &quot; &amp;SISA1" newline="True"/>
+            <assign variable="DAPUR" expression="0.3*SISA1+300000"/>
+            <output expression="&quot;PENGELUARAN DAPUR + LISTRIK : Rp. &quot; &amp;DAPUR" newline="True"/>
+            <assign variable="SISA2" expression="SISA1-DAPUR"/>
+            <output expression="&quot;SISA UANG KE 2 : Rp&quot; &amp;SISA2" newline="True"/>
+            <assign variable="TABUNGAN" expression="SISA2*0.2"/>
+            <output expression="&quot;TABUNGAN UNTUK DISISIHKAN : Rp. &quot; &amp;TABUNGAN" newline="True"/>
+            <assign variable="SISA3" expression="SISA2-TABUNGAN"/>
+            <output expression="&quot;TOTAL AKHIR SISA UANG ADALAH : Rp. &quot; &amp;SISA3" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

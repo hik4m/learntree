@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 17, Looping Do While"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-02 07.14.04 PM"/>
+        <attribute name="created" value="SFA7SElLQU07MjAyNS0xMi0wMjswNy4xMS40NCBQTTsxNzY1"/>
+        <attribute name="edited" value="SFA7SElLQU07MjAyNS0xMi0wMjswNy4xNC4wNCBQTTsxOzE4NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <do expression="i&lt;10">
+                <output expression="&quot;Fatih Melompat ke-&quot;&amp;i" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </do>
+            <output expression="&quot;Fatih Sudah Capek Melompat&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

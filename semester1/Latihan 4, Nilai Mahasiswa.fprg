@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value="Latihan 4, Nilai Mahasiswa"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-25 01:59:10 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMDktMjQ7MTAuMDkuNDMgUE07MjQ0OQ=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMDktMjQ7MTAuMjYuNTkgUE07MTsyNTYz"/>
+        <attribute name="edited" value="UHVza29tO0cxLTEwOzIwMjUtMDktMjU7MDE6NTk6MTAgUE07MzsyMjk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="HIKAM KEREN"/>
+            <declare name="TUGAS, UAS, UTS" type="Integer" array="False" size=""/>
+            <declare name="NA" type="Real" array="False" size=""/>
+            <declare name="NAMA" type="String" array="False" size=""/>
+            <output expression="&quot;Input Nama: &quot;" newline="True"/>
+            <input variable="NAMA"/>
+            <output expression="&quot;Input Nilai Tugas: &quot;" newline="True"/>
+            <input variable="TUGAS"/>
+            <output expression="&quot;Input Nilai UTS: &quot;" newline="True"/>
+            <input variable="UTS"/>
+            <output expression="&quot;Input Nilai UAS: &quot;" newline="True"/>
+            <input variable="UAS"/>
+            <assign variable="NA" expression="(TUGAS + UTS + UAS) / 3"/>
+            <if expression="NA &gt;= 85">
+                <then>
+                    <output expression="&quot;Nama: &quot;&amp;NAMA &amp;ToChar(13)&amp; &quot;Grade A&quot; &amp;ToChar(13)&amp; &quot;Nilai  Akhir: &quot; &amp;NA &amp;ToChar(13)&amp; &quot;ANDA LULUS&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="NA &gt;= 70">
+                        <then>
+                            <output expression="&quot;Nama: &quot;&amp;NAMA &amp;ToChar(13)&amp; &quot;Grade B&quot; &amp;ToChar(13)&amp; &quot;Nilai Akhir: &quot; &amp;NA &amp;ToChar(13)&amp; &quot;ANDA LULUS&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="NA &gt;= 60">
+                                <then>
+                                    <output expression="&quot;Nama: &quot;&amp;NAMA &amp;ToChar(13)&amp; &quot;Grade C&quot; &amp;ToChar(13)&amp; &quot;Nilai Akhir: &quot; &amp;NA &amp;ToChar(13)&amp; &quot;ANDA LULUS&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="NA &gt;= 45">
+                                        <then>
+                                            <output expression="&quot;Nama: &quot;&amp;NAMA &amp;ToChar(13)&amp; &quot;Grade D&quot; &amp;ToChar(13)&amp; &quot;Nilai Akhir: &quot; &amp;NA &amp;ToChar(13)&amp;&quot;SELAMAT!!!! ANDA TIDAK LULUS&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Nama: &quot;&amp;NAMA &amp;ToChar(13)&amp; &quot;Grade D&quot; &amp;ToChar(13)&amp; &quot;Nilai : &quot; &amp;NA &amp;ToChar(13)&amp; &quot; SELAMAT!!! ANDA TIDAK LULUS&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

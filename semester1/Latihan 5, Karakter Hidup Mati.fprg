@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Puskom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-25 02:25:38 PM"/>
+        <attribute name="created" value="UHVza29tO0cxLTEwOzIwMjUtMDktMjU7MDI6MDQ6MTMgUE07MjE4MA=="/>
+        <attribute name="edited" value="UHVza29tO0cxLTEwOzIwMjUtMDktMjU7MDI6MjU6MzggUE07MTsyMjk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="huruf" type="String" array="False" size=""/>
+            <output expression="&quot;Input Huruf&quot;" newline="True"/>
+            <input variable="huruf"/>
+            <if expression="huruf=&quot;a&quot; Or huruf=&quot;A&quot; Or huruf=&quot;i&quot; Or huruf=&quot;I&quot; Or huruf=&quot;U&quot; Or huruf=&quot;u&quot; Or huruf=&quot;e&quot; Or huruf=&quot;E&quot; Or huruf=&quot;o&quot; Or huruf=&quot;O&quot;">
+                <then>
+                    <output expression="&quot;HURUF HIDUP&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;HURUF MATI&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

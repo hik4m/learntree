@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 15, Looping for"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-02 07.08.05 PM"/>
+        <attribute name="created" value="SFA7SElLQU07MjAyNS0xMi0wMjswNy4wNi4yNiBQTTsxNzY5"/>
+        <attribute name="edited" value="SFA7SElLQU07MjAyNS0xMi0wMjswNy4wOC4wNSBQTTsxOzE4NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Fatih Melompat&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

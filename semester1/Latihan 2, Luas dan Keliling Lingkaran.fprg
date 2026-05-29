@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 2, Luas dan Keliling Lingkaran"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-24 07.35.50 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMDktMjQ7MDcuMTAuMjQgUE07MjQ0Ng=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMDktMjQ7MDcuMzUuNTAgUE07MTsyNTYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="r, pilihan" type="Integer" array="False" size=""/>
+            <declare name="keliling, luas" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan jari-jari lingkaran&quot;" newline="True"/>
+            <input variable="r"/>
+            <assign variable="luas" expression="3.14 * r * r"/>
+            <assign variable="keliling" expression="2 * 3.14 * r"/>
+            <output expression="&quot;Ketik 1 jika ingin menghitung luas&quot; &amp;ToChar(13)&amp; &quot; Ketik 2 jika ingin menghitung keliling&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan = 1">
+                <then>
+                    <output expression="&quot;Luas Lingkaran : &quot; &amp;luas" newline="True"/>
+                </then>
+                <else>
+                    <if expression="pilihan = 2">
+                        <then>
+                            <output expression="&quot;Keliling Lingkaran: &quot; &amp;keliling" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Nguawur nek nginput&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

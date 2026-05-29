@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Puskom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-02 01:28:14 PM"/>
+        <attribute name="created" value="UHVza29tO0cxLTEwOzIwMjUtMTAtMDI7MDE6MTQ6MzAgUE07MjE2Ng=="/>
+        <attribute name="edited" value="UHVza29tO0cxLTEwOzIwMjUtMTAtMDI7MDE6Mjg6MTQgUE07NjsyMjg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, n3, n4, n5, n6, n7, h" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input Nilai 1&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Input Nilai 2&quot;" newline="True"/>
+            <input variable="n2"/>
+            <output expression="&quot;Input Nilai 3&quot;" newline="True"/>
+            <input variable="n3"/>
+            <output expression="&quot;Input Nilai 4&quot;" newline="True"/>
+            <input variable="n4"/>
+            <output expression="&quot;Input Nilai 5&quot;" newline="True"/>
+            <input variable="n5"/>
+            <output expression="&quot;Input Nilai 6&quot;" newline="True"/>
+            <input variable="n6"/>
+            <output expression="&quot;Input Nilai 7&quot;" newline="True"/>
+            <input variable="n7"/>
+            <assign variable="h" expression="n1+n2+n3+n4+n5+n6+n7"/>
+            <if expression="h&gt;=100">
+                <then>
+                    <output expression="&quot;Hasil  Lebih dari 100&quot; &amp;ToChar(13) &amp;&quot;Hasilnya: &quot;&amp;h" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Hasil dibawah 100&quot; &amp;ToChar(13) &amp;&quot;Hasilnya: &quot;&amp;h" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

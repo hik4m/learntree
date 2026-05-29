@@ -1,0 +1,28 @@
+nama = str(input("Input Nama Anda: "))
+sekolah = str(input("Input Sekolah Anda: "))
+asalSekolah = str(input("Input Asal Sekolah Anda: "))
+jenisKelamin = str(input("Input Jenis Kelamin Anda: "))
+
+usia = int(input("Input Usia Anda: "))
+saku = float(input("Input Uang Saku Anda: "))
+mingguan = float(input("Input Uang Mingguan Anda: "))
+pengeluaran = float(input("Input Pengeluaran Anda: "))
+nilaiAkhirRaport = float(input("Input Nilai Akhir Raport Anda: "))
+
+tabungan = saku + mingguan - pengeluaran
+
+print ("=========================")
+print ("||     BIODATA ANDA    ||")
+print ("=========================")
+print ("Nama Anda               : ", nama)
+print ("Sekolah Anda            : ", sekolah)
+print ("Asal Sekolah Anda       : ", asalSekolah)
+print ("Jenis Kelamin Anda      : ", jenisKelamin)
+print ("Umur  Anda              : ", usia) 
+print ("Nilai Akhir Raport Anda : ", usia) 
+print ("=========[KEUNGANAN]=========")
+print ("Uang Saku Perbulan Anda    : ", saku)
+print ("Uang Mingguan Anda         : ", mingguan) 
+print ("Pengeluaran Anda           : ", pengeluaran) 
+print ("Sisa Ditabung Anda         : ", tabungan) 
+print ("=========================")

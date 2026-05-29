@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TUGAS 1"/>
+        <attribute name="authors" value="gakyy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-27 02.23.11 PM"/>
+        <attribute name="created" value="Z2FreXk7QU5HR0FDVVk7MjAyNS0wOS0yNTswMzo0NzoyMyBQTTsyNDI4"/>
+        <attribute name="edited" value="Z2FreXk7QU5HR0FDVVk7MjAyNS0wOS0yNTswMzo1NjozMyBQTTsxOzI1Mzc="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MQjYwUUc5OzIwMjUtMDktMjc7MDIuMjMuMTEgUE07MjsyNTUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="P, X, Y, Q, P2" type="Integer" array="False" size=""/>
+            <declare name="conC" type="String" array="False" size=""/>
+            <output expression="&quot;INPUT X&quot;" newline="True"/>
+            <input variable="X"/>
+            <output expression="&quot;INPUT Y&quot;" newline="True"/>
+            <input variable="Y"/>
+            <assign variable="P" expression="X+Y"/>
+            <assign variable="P2" expression="P%2"/>
+            <if expression="P2=0">
+                <then>
+                    <assign variable="Q" expression="X*Y"/>
+                    <assign variable="conC" expression="&quot;P bernilai Genap&quot; &amp;ToChar(13)&amp; &quot;==== Proses Penghitungan ====&quot; &amp;ToChar(13)&amp;&quot;P = &quot; &amp;X&amp; &quot;+&quot; &amp;Y&amp; ToChar(13)&amp;  &quot;Q = &quot; &amp;X&amp; &quot;&#215;&quot; &amp;Y&amp; ToChar(13)&amp; &quot;======== Hasil ========&quot;"/>
+                </then>
+                <else>
+                    <assign variable="Q" expression="X / Y"/>
+                    <assign variable="conC" expression="&quot;P bernilai Ganil&quot; &amp;ToChar(13)&amp; &quot;==== Proses Penghitungan ====&quot; &amp;ToChar(13)&amp;&quot;P = &quot; &amp;X&amp; &quot;+&quot; &amp;Y&amp; ToChar(13)&amp;  &quot;Q = &quot; &amp;X&amp; &quot;/&quot; &amp;Y&amp; ToChar(13)&amp; &quot;======== Hasil ========&quot;"/>
+                </else>
+            </if>
+            <output expression="conC &amp;ToChar(13)&amp;&quot;P = &quot; &amp;P &amp;ToChar(13)&amp; &quot;Q = &quot; &amp;Q" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

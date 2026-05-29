@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PUSKOM"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-23 01:30:42 PM"/>
+        <attribute name="created" value="UFVTS09NO0cxLTE3OzIwMjUtMTAtMjM7MTI6NTU6MDggUE07MjAyOA=="/>
+        <attribute name="edited" value="UFVTS09NO0cxLTE3OzIwMjUtMTAtMjM7MDE6MzA6NDIgUE07MTg7MjE4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="KODE SOAL: A"/>
+            <comment text="NAMA : AQLIZA JUNIOR HIKAM RAMADHAN&#13;&#10;NPM : 2513030127"/>
+            <declare name="nama, hasil, bagian2" type="String" array="False" size=""/>
+            <declare name="harikerja, jamLembur, bagian" type="Integer" array="False" size=""/>
+            <declare name="gaji, upah" type="Real" array="True" size="3"/>
+            <declare name="totalG, totalU, gajiAkhir, trans" type="Real" array="False" size=""/>
+            <output expression="&quot;Input Nama&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;Pilih Bagian: &quot; &amp;ToChar(13)&amp; &quot;1. Produksi&quot; &amp;ToChar(13)&amp; &quot;2. Packing&quot; &amp;ToChar(13)&amp; &quot;3. Rolling&quot;&amp;ToChar(13)&amp;&quot;Input angka (1-3)&quot;" newline="True"/>
+            <input variable="bagian"/>
+            <while expression="bagian&gt;3">
+                <output expression="&quot;Pilih Bagian: &quot; &amp;ToChar(13)&amp; &quot;1. Produksi&quot; &amp;ToChar(13)&amp; &quot;2. Packing&quot; &amp;ToChar(13)&amp; &quot;3. Rolling&quot;" newline="True"/>
+                <input variable="bagian"/>
+            </while>
+            <output expression="&quot;Input Hari Kerja&quot;" newline="True"/>
+            <input variable="hariKerja"/>
+            <output expression="&quot;Input Jam Lembur&quot;" newline="True"/>
+            <input variable="jamLembur"/>
+            <if expression="bagian == 1">
+                <then>
+                    <assign variable="bagian2" expression="&quot;Produksi&quot;"/>
+                    <if expression="jamLembur&gt;= 10">
+                        <then>
+                            <assign variable="trans" expression="12000*jamLembur"/>
+                        </then>
+                        <else>
+                            <assign variable="trans" expression="0"/>
+                        </else>
+                    </if>
+                    <assign variable="gaji[0]" expression="160000"/>
+                    <assign variable="upah[0]" expression="25000"/>
+                    <assign variable="totalG" expression="gaji[0] * hariKerja"/>
+                    <assign variable="totalU" expression="upah[0] * jamLembur"/>
+                    <assign variable="gajiAkhir" expression="totalG + totalU + trans"/>
+                    <assign variable="hasil" expression="&quot;Jumlah Uang Lemburnya: Rp.&quot; &amp;totalG&amp;ToChar(13)&amp;&quot;Transportnya : Rp.&quot; &amp;trans&amp;ToChar(13)&amp;&quot;Total Gajinya: Rp.&quot; &amp;gajiAkhir"/>
+                </then>
+                <else>
+                    <if expression="bagian==2">
+                        <then>
+                            <assign variable="bagian2" expression="&quot;Packing&quot;"/>
+                            <if expression="jamLembur&gt;= 10">
+                                <then>
+                                    <assign variable="trans" expression="12000*jamLembur"/>
+                                </then>
+                                <else>
+                                    <assign variable="trans" expression="0"/>
+                                </else>
+                            </if>
+                            <assign variable="gaji[1]" expression="145000"/>
+                            <assign variable="upah[1]" expression="20000"/>
+                            <assign variable="totalG" expression="gaji[1] * hariKerja"/>
+                            <assign variable="totalU" expression="upah[1] * jamLembur"/>
+                            <assign variable="gajiAkhir" expression="totalG + totalU + trans"/>
+                            <assign variable="hasil" expression="&quot;Jumlah Uang Lemburnya: Rp.&quot; &amp;totalG&amp;ToChar(13)&amp;&quot;Transportnya : Rp.&quot; &amp;trans&amp;ToChar(13)&amp;&quot;Total Gajinya: Rp.&quot; &amp;gajiAkhir"/>
+                        </then>
+                        <else>
+                            <if expression="bagian==3">
+                                <then>
+                                    <assign variable="bagian2" expression="&quot;Rolling&quot;"/>
+                                    <if expression="jamLembur&gt;= 10">
+                                        <then>
+                                            <assign variable="trans" expression="12000*jamLembur"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="trans" expression="0"/>
+                                        </else>
+                                    </if>
+                                    <assign variable="gaji[2]" expression="145000"/>
+                                    <assign variable="upah[2]" expression="20000"/>
+                                    <assign variable="totalG" expression="gaji[2] * hariKerja"/>
+                                    <assign variable="totalU" expression="upah[2] * jamLembur"/>
+                                    <assign variable="gajiAkhir" expression="totalG + totalU + trans"/>
+                                    <assign variable="hasil" expression="&quot;Jumlah Uang Lemburnya: Rp.&quot; &amp;totalG&amp;ToChar(13)&amp;&quot;Transportnya : Rp.&quot; &amp;trans&amp;ToChar(13)&amp;&quot;Total Gajinya: Rp.&quot; &amp;gajiAkhir"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Nama : &quot; &amp;nama &amp;ToChar(13)&amp;&quot;Bagian: &quot; &amp;bagian2&amp;ToChar(13)&amp; &quot;Jumlah Hari Kerja nya: &quot; &amp;hariKerja &amp;ToChar(13)&amp;&quot;Upah yang didapat: Rp.&quot; &amp;totalU&amp;ToChar(13)&amp;hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

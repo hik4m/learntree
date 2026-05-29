@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Puskom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-02 01:43:20 PM"/>
+        <attribute name="created" value="UHVza29tO0cxLTEwOzIwMjUtMTAtMDI7MDE6MzQ6MDMgUE07MjE2OA=="/>
+        <attribute name="edited" value="UHVza29tO0cxLTEwOzIwMjUtMTAtMDI7MDE6NDM6MjAgUE07MTsyMjc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="harga1, harga2, jam, bayar, jml" type="Integer" array="False" size=""/>
+            <assign variable="harga1" expression="5000"/>
+            <assign variable="harga2" expression="3000"/>
+            <input variable="jam"/>
+            <if expression="jam&gt;1">
+                <then>
+                    <assign variable="jml" expression="harga2 * jam"/>
+                    <assign variable="bayar" expression="harga1 + harga2"/>
+                    <output expression="bayar" newline="True"/>
+                </then>
+                <else>
+                    <output expression="harga1" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

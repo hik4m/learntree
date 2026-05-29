@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Puskom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-25 02:41:09 PM"/>
+        <attribute name="created" value="UHVza29tO0cxLTEwOzIwMjUtMDktMjU7MDI6MzA6MjYgUE07MjE4Mw=="/>
+        <attribute name="edited" value="UHVza29tO0cxLTEwOzIwMjUtMDktMjU7MDI6NDE6MDkgUE07MTsyMjk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="gajipokok, jamkerja, upahlembur, gbersih, jamlembur" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inputkan Jam Kerja&quot;" newline="True"/>
+            <input variable="jamkerja"/>
+            <if expression="jamkerja &gt; 48">
+                <then>
+                    <assign variable="gbersih" expression="48*20000"/>
+                    <assign variable="jamlembur" expression="jamkerja-48"/>
+                    <assign variable="upahlembur" expression="jamlembur-12500"/>
+                </then>
+                <else>
+                    <assign variable="gajipokok" expression="jamkerja*20000"/>
+                    <assign variable="jamlembur" expression="0"/>
+                    <assign variable="upahlembur" expression="0"/>
+                </else>
+            </if>
+            <assign variable="gbersih" expression="gajipokok+upahlembur"/>
+            <output expression="&quot;Jam Kerja: &quot; &amp;jamkerja  &amp;ToChar(13)&amp; &quot;Gaji Pokok: &quot; &amp;gajipokok &amp;ToChar(13)&amp; &quot;Upah Lemburnya: &quot; &amp;upahlembur &amp;ToChar(13)&amp; &quot;Gaji Bersih: &quot; &amp;gbersih" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

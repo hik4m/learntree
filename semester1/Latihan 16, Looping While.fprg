@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 16, Looping While"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-02 07.11.41 PM"/>
+        <attribute name="created" value="SFA7SElLQU07MjAyNS0xMi0wMjswNy4wOC4xMiBQTTsxNzY2"/>
+        <attribute name="edited" value="SFA7SElLQU07MjAyNS0xMi0wMjswNy4xMS40MSBQTTsxOzE4NzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <input variable="i"/>
+            <while expression="i&lt;10">
+                <output expression="&quot;Fatih Melompat&quot;" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
